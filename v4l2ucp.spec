@@ -8,9 +8,8 @@ Url:		http://v4l2ucp.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/project/v4l2ucp/v4l2ucp/2.0/%{name}-%{version}.tar.bz2
 Patch0:		v4l2ucp-2.0.2-kernel-2.6.38.patch
 BuildRequires:	cmake
-BuildRequires:	libv4l-devel >= 0.8.3
+BuildRequires:	pkgconfig(libv4l1)
 BuildRequires:	qt4-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 It reads a description of the controls that the V4L2 device 
@@ -29,16 +28,9 @@ one or all the controls to their default state
 %make
 
 %install
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
 %makeinstall_std -C build
 
-%find_lang %{name}
-
-%clean
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
-
-%files -f %{name}.lang
-%defattr(-,root,root)
+%files
 %doc README TODO
 %{_bindir}/v4l2*
 %{_datadir}/applications/*.desktop
