@@ -1,7 +1,7 @@
 Summary:	A universal control panel for all Video for Linux Two devices
 Name:		v4l2ucp
 Version:	2.0.2
-Release:	6
+Release:	7
 License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		http://v4l2ucp.sourceforge.net/
