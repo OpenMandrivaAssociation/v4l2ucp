@@ -4,7 +4,7 @@ Version:	2.0.2
 Release:	5
 License:	GPLv2+
 Group:		System/Kernel and hardware
-Url:		http://v4l2ucp.sourceforge.net/
+Url:		https://v4l2ucp.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/project/v4l2ucp/v4l2ucp/2.0/%{name}-%{version}.tar.bz2
 Patch0:		v4l2ucp-2.0.2-kernel-2.6.38.patch
 BuildRequires:	cmake
